@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto:500');
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+#page-title {
+  font-size: 2em;
+}
+
+#coordinates-form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.form-field {
+  margin: 5px;
+}
+
+#fetch-results {
+}

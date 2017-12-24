@@ -4,8 +4,8 @@ function getWeather(latitude, longitude) {
       return response.json();
     })
     .then(json => {
-      let mainDiv = document.getElementById("main");
-      mainDiv.innerHTML += `The current weather conditions at coordinates (${latitude}, ${longitude}) are: ${json.currently.summary}. The temperature is ${json.currently.temperature}.`;
+      let resultsDiv = document.getElementById("fetch-results");
+      resultsDiv.innerHTML = `Selected latitude: ${latitude}°<br>Selected longitude: ${longitude}°<br>Current conditions: ${json.currently.summary}<br> Temperature: ${json.currently.temperature}°F`;
     });
 }
 
