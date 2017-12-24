@@ -9,13 +9,17 @@
   </head>
 
   <body>
-    <h1>Weather Fetch</h1>
-
     <div id="main">
-      <form>
-        Latitude: <input type="text" name="lat"><br>
-        Longitude: <input type="text" name="long"><br>
-        <input type="submit" value="Get Weather Report">
+      <h1>Weather Fetch</h1>
+
+      <form id="coordinates-form" onsubmit="event.preventDefault(); coordinatesSubmitFunction();">
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude" />
+
+        <label for="longitude">Latitude:</label>
+        <input type="text" id="longitude" name="longitude" />
+
+        <input type="submit" value="Get Weather"/>
       </form>
     </div>
   </body>
