@@ -1,15 +1,16 @@
-let main = document.getElementById("main");
-
 function getWeather(latitude, longitude) {
   fetch(`/api/v1/forecast/${latitude},${longitude}`)
     .then(response => {
       return response.json();
     })
     .then(json => {
-      console.log(json.currently);
-      let mainDiv = document.getElementById('main');
-      mainDiv.innerHTML += `The current weather conditions are: ${json.currently.summary}. The temperature is ${json.currently.temperature}.`;
+      let mainDiv = document.getElementById("main");
+      mainDiv.innerHTML += `The current weather conditions at coordinates (${latitude}, ${longitude}) are: ${json.currently.summary}. The temperature is ${json.currently.temperature}.`;
     });
 }
 
-getWeather(42.36,-71.06);
+function coordinatesSubmitFunction() {
+  let latitude = document.getElementById("latitude").value;
+  let longitude = document.getElementById("longitude").value;
+  getWeather(latitude,longitude);
+}
